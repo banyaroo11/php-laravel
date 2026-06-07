@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.sec-enroll {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.sec-enroll-form-ttl {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.sec-enroll-form {
+  width: 300px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.sec-enroll-form-img {
+  width: 80px;
+  height: 80px;
+}
+
+.sec-enroll-form-gp {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.sec-enroll-form-gp:first-of-type {
+  margin-top: 20px;
+}
+
+.sec-enroll-form-gp label {
+  flex: 1;
+}
+
+.sec-enroll-form-gp input {
+  flex: 3;
+}
+
+.sec-enroll-form-btn {
+  margin-top: 20px;
+}
+
+.sec-enroll-form-error {
+  color: #ff0000;
+}

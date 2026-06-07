@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+table, th, td {
+  border: 1px solid #000000;
+}
+
+table {
+  width: 100%;
+  margin: 0 0 0 0;
+}
+
+td, th {
+  padding: 5px 8px;
+}
+
+.sec-studs {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.sec-studs-add {
+  display: block;
+  margin-bottom: 5px;
+  text-align: end;
+}
+
+.sec-studs-del-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff0000;
+  text-decoration: underline;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.sec-studs-success {
+  color: #00ff00;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sec-studs-error {
+  color: #ff0000;
+  text-align: center;
+  margin-top: 10px;
+}
