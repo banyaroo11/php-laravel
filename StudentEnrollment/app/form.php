@@ -15,7 +15,7 @@
         try {
             $student = get_student_by_id($db, $id);
         } catch (PDOException $e) {
-            log_msg("Error fetching student ID: $id data. " . $e->getMessage());
+            log_msg("error", "Error fetching student ID: $id data. " . $e->getMessage());
             die("Error fetching student data.");
         }
 

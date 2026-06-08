@@ -55,7 +55,7 @@
                     require_once "save.php";
                 }
             } catch(PDOException $e) {
-                log_msg("Databse error.", $e->getMessage());
+                log_msg("error", $e->getMessage());
                 $_SESSION["error"]["db_error"] = "Database error occured.";
                 
                 header("Location: form.php");
