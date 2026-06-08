@@ -1,6 +1,6 @@
 <?php
     if ($_SERVER["REQUEST_URI"] === "/") {
-        header("Location: students.php");
+        header("Location: /app/students.php");
         exit();
     }
 ?>
