@@ -2,6 +2,7 @@
     session_start();
 
     require_once "db.php";
+    require_once "log.php";
 
     if (isset($_SESSION["error"])) {
         $error = $_SESSION["error"];
@@ -11,7 +12,12 @@
         $id = $_GET["id"];
 
         require_once "helper.php";
-        $student = get_student_by_id($db, $id);
+        try {
+            $student = get_student_by_id($db, $id);
+        } catch (PDOException $e) {
+            log_msg("Error fetching student ID: $id data. " . $e->getMessage());
+            die("Error fetching student data.");
+        }
 
         $name = $student->student_name;
         $age = $student->age;

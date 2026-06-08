@@ -11,9 +11,9 @@
     if($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $id = $_POST["id"];
-        $name = $_POST["name"];
+        $name = trim($_POST["name"]);
         $age = $_POST["age"];
-        $gender = $_POST["gender"];
+        $gender = trim($_POST["gender"]);
 
         if (empty($id) || !is_numeric($id) || (int)$id < 21370) {
             $id_error = "ID value cannot be in invalid format!";
@@ -43,7 +43,7 @@
 
         if (empty($gender)) {
             $gender_error = "At least one gender must be chosen!";
-        } else if (!in_array($gender, ["male", "female", "others"])) {
+        } else if (!in_array(trim($gender), ["male", "female", "others"])) {
             $gender_error = "Invalid gender value!";
         }
 
@@ -55,7 +55,9 @@
                     require_once "save.php";
                 }
             } catch(PDOException $e) {
-                $_SESSION["error"]["db_error"] = "Database error occured: " . $e->getMessage();
+                log_msg("Databse error.", $e->getMessage());
+                $_SESSION["error"]["db_error"] = "Database error occured.";
+                
                 header("Location: form.php");
                 die();
             }

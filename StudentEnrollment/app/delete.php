@@ -2,6 +2,7 @@
     session_start();
 
     require_once "db.php";
+    require_once "log.php";
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         try {
@@ -18,11 +19,13 @@
                 unlink($image_url);
             }
 
+            log_msg("info", "Deleted student ID: $id.");
             $_SESSION["success"] = "Student has been deleted successfully.";
-        } catch (PDOException $e) {
+        } catch (Exception $e) {
             $db->rollback();
             
-            $_SESSION["error"] = "Error: " . $e->getMessage();
+            log_msg("error", "Error deleting student ID: $id. " . $e->getMessage());
+            $_SESSION["error"] = "Error occured.";
         } finally {
             header("Location: students.php");
             exit();

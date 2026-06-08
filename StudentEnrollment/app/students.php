@@ -7,7 +7,8 @@
     try {
         $students = get_all_students($db);
     } catch(PDOException $e) {
-        die("Fetching students failed: " . $e->getMessage());
+        log_msg("error", "Fetching students failed. " . $e->getMessage());
+        die("Fetching students failed.");
     }
 ?>
 <!DOCTYPE html>

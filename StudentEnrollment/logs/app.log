@@ -1,0 +1,9 @@
+[2026-06-08 11:33:48] [ERROR] Fetching students failed. SQLSTATE[42S02]: Base table or view not found: 1146 Table 'banyaroo.students' doesn't exist
+[2026-06-08 11:33:59] [ERROR] Fetching students failed. SQLSTATE[42S02]: Base table or view not found: 1146 Table 'banyaroo.students' doesn't exist
+[2026-06-08 11:35:03] [INFO] Ernolled student ID: 21570.
+[2026-06-08 11:35:24] [INFO] Updated student ID: 21570.
+[2026-06-08 11:35:39] [ERROR] Error deleting student ID: 21570. SQLSTATE[42S02]: Base table or view not found: 1146 Table 'banyaroo.students' doesn't exist
+[2026-06-08 11:35:39] [ERROR] Fetching students failed. SQLSTATE[42S02]: Base table or view not found: 1146 Table 'banyaroo.students' doesn't exist
+[2026-06-08 11:36:35] [INFO] Deleted student ID: 21371.
+[2026-06-08 11:36:49] [INFO] Deleted student ID: 21370.
+[2026-06-08 11:37:31] [DATABSE ERROR. ] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'banyaroo.students' doesn't exist

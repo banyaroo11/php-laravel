@@ -33,11 +33,13 @@
             move_uploaded_file($_FILES["image"]["tmp_name"], $image_url);
         }
 
+        log_msg("info", "Updated student ID: $id.");
         $_SESSION["success"] = "Student has been updated successfully.";
-    } catch (PDOException $e) {
+    } catch (Exception $e) {
         $db->rollback();
 
-        $_SESSION["error"] = "Error: " . $e->getMessage();
+        log_msg("error", "Error updating student ID: $id. " . $e->getMessage());
+        $_SESSION["error"] = "Error occured.";
     } finally {
         header("Location: students.php");
         exit();
