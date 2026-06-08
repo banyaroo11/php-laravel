@@ -1,0 +1,22 @@
+{
+    "name": "banyaroo/student-enrollment",
+    "autoload": {
+        "psr-4": {
+            "Banyaroo\\StudentEnrollment\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Banyar Oo",
+            "email": "mtmintern.banyaroo@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "repositories": [{
+        "name": "packagist",
+        "type": "composer",
+        "url": "https://packagist.jp"
+    }]
+}
