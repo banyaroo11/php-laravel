@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('articles.index');
 });
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
@@ -14,6 +14,8 @@ Route::get('/articles/details/{id}', [ArticleController::class, 'details'])->nam
 Route::get('/articles/more/{id}', function ($id) {
     return redirect()->route('articles.details', ['id' => 1]);
 });
+
+Route::match(['get', 'post'], '/articles/create', [ArticleController::class, 'create'])->name('articles.create');
 
 Auth::routes();
 
