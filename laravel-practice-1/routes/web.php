@@ -15,6 +15,10 @@ Route::get('/articles/more/{id}', function ($id) {
     return redirect()->route('article.details', ['id' => 1]);
 });
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 /*
 Route::get('/articles', function() {
     return 'Hello Articles';
