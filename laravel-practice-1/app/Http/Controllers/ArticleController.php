@@ -25,6 +25,15 @@ class ArticleController extends Controller
         ]);
     }
 
+    public function delete(Request $request, int $id) 
+    {
+        if ($request->isMethod('post')) {
+            $article = Article::find($id);
+            $article->delete();
+            return redirect(route('articles.index'))->with('success', 'Successfully Deleted');
+        }
+    }
+
     public function create(Request $request)
     {
         if ($request->isMethod('get')) {

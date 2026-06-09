@@ -1,7 +1,14 @@
 @extends('layouts.app')
 @section('content')
     <section class="p-5">
-        <h1 class="fs-3">Create News</h1>
+        <h1 class="fs-3 fw-bold">Create News</h1>
+        @if($errors->any())
+            <div class="alert alert-danger">
+                @foreach($errors->all() as $err)
+                    <p>{{$err}}</p>
+                @endforeach
+            </div>
+        @endif
         <form method="POST" action="{{ route('articles.create') }}" 
         class="d-flex flex-column align-items-start justify-content-start" 
         style="width: 450px;">

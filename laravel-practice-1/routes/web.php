@@ -17,6 +17,8 @@ Route::get('/articles/more/{id}', function ($id) {
 
 Route::match(['get', 'post'], '/articles/create', [ArticleController::class, 'create'])->name('articles.create');
 
+Route::post('/articles/delete/{id}', [ArticleController::class, 'delete'])->name('articles.delete');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

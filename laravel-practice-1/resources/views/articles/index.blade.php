@@ -3,6 +3,9 @@
     <h1 class="text-center">Latest News</h1>
     <section class="p-5 pt-3">
         <h2>International News<a href="{{ url('/articles/create') }}" class="d-block text-success text-start mt-2 fs-6">+ Add News</a></h2>
+        @if(session('success'))
+            <p class="alert alert-success fw-bold">{{session('success')}}</p>
+        @endif
         <ul class="border-bottom-1">
             @foreach ($articles as $article)
                 <li class="d-flex flex-column align-items-start justify-content-start mt-4">
