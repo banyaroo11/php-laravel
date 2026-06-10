@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CommentController;
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');
@@ -31,3 +32,5 @@ Route::get('/', function() {
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 
 Route::get('/articles/details/{id}', [ArticleController::class, 'details'])->name('articles.details');
+
+Route::post('/comments/create', [CommentController::class, 'create'])->name('comments.create');

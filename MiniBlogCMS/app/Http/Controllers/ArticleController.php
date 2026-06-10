@@ -20,10 +20,14 @@ class ArticleController extends Controller
 
     public function details(int $id)
     {
-        $article = Article::findOrFail($id);
+        $article = Article::with('comments.user')->find($id);
+
+        // return $article->comments;
 
         return view('articles.details', [
-            'article' => $article
+            'article' => $article,
+            'comments' => $article->comments,
         ]);
+
     }
 }

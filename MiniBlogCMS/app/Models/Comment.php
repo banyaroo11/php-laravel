@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Comment extends Model
 {
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }
