@@ -20,9 +20,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand fs-3" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}<span class="fs-6 ms-1 fw-semibold text-secondary">A Travel Blog curated with Passion ✈️<span>
-                </a>
+                <h1>
+                    <a class="navbar-brand fs-3" href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}<span class="fs-6 ms-1 fw-semibold text-secondary">A Travel Blog curated with Passion ✈️<span>
+                    </a>
+                </h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

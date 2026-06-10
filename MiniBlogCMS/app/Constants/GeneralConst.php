@@ -5,6 +5,8 @@ namespace App\Constants;
 class GeneralConst
 {
     public const APP_NAME = 'Laravel Structure App';
+    // Pagnination
+    public const PAGINATION=6;
     // Roles
     public const ADMIN = 0;
     public const MEMBER = 1;

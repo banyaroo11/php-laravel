@@ -20,7 +20,7 @@ class ArticleFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'body' => $this->faker->paragraph,
-            'love' => $this->faker->numberBetween(0, 100)
+            'love' => $this->faker->numberBetween(0, 0)
         ];
     }
 }

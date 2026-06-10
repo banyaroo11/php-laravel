@@ -28,4 +28,4 @@ Route::get('/', function() {
     return redirect()->route('home');
 });
 
-Route::get('/articles', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
