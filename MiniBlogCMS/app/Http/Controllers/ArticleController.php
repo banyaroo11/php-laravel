@@ -17,4 +17,13 @@ class ArticleController extends Controller
             'articles' => $articles
         ]);
     }
+
+    public function details(int $id)
+    {
+        $article = Article::findOrFail($id);
+
+        return view('articles.details', [
+            'article' => $article
+        ]);
+    }
 }

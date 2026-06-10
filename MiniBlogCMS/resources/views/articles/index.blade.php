@@ -12,7 +12,7 @@
 
                     <p class="mt-3">{{ Str::limit($article->body, 200) }}</p>
 
-                    <div>❤️ {{ $article->love }}</div>
+                    <p>❤️ {{ $article->love }}</p>
 
                     <a href="{{ route('articles.details', ['id' => $article->id]) }}" class="btn btn-primary mt-3">Read More</a>
                 </div>
@@ -22,6 +22,6 @@
                 No posts found.
             </div>
         @endforelse
-        <div class="mt-4 d-flex"> {{ $articles->links() }} </div>
+        <div class="mt-4 d-flex">{{ $articles->links() }}</div>
     </section>
 @endsection

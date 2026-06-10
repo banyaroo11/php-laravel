@@ -29,3 +29,5 @@ Route::get('/', function() {
 });
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+
+Route::get('/articles/details/{id}', [ArticleController::class, 'details'])->name('articles.details');
