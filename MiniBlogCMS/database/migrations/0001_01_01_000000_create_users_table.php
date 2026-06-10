@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('profile_path')->nullable();
-            $table->tinyInteger('role');
+            $table->enum('role', ['admin', 'author', 'visitor'])->default('visitor');
             $table->dateTime('dob')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();

@@ -12,6 +12,8 @@
 
 ## For DB-based Session
 
+- php artisan cache:table
+
 - php artisan make:migration create_sessions_table
 
 - edit MiniBlogCMS\database\migrations\timestamp_create_sessions_table.php
