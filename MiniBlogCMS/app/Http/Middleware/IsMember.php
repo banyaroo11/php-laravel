@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use App\Constants\GeneralConst;
 
 class IsMember
 {
@@ -15,7 +16,7 @@ class IsMember
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!auth()->check() || auth()->user()->role != 'member') 
+        if(!auth()->check() || auth()->user()->role != GeneralConst::MEMBER) 
         {
             return abort(403, 'Unauthorized Access');
         }

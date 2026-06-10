@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Constants\GeneralConst;
 
 class UserSeeder extends Seeder
 {
@@ -21,14 +22,14 @@ class UserSeeder extends Seeder
             'name' => 'Banyar Oo', 
             'email' => 'banyaroo@gmail.com', 
             'password' => Hash::make('banyaroo'), 
-            'role' => 'admin'
+            'role' => GeneralConst::ADMIN,
         ]);
 
         User::create([
             'name' => 'Myint Zu Maung', 
             'email' => 'myintzumaung@gmail.com', 
             'password' => Hash::make('myintzumaung'), 
-            'role' => 'member'
+            'role' => GeneralConst::MEMBER,
         ]);
 
     }

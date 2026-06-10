@@ -7,10 +7,10 @@ class GeneralConst
     public const APP_NAME = 'Laravel Structure App';
     // Roles
     public const ADMIN = 0;
-    public const USER = 1;
+    public const MEMBER = 1;
     public const ROLES = [
         self::ADMIN => 'Admin',
-        self::USER => 'User',
+        self::MEMBER => 'Member',
     ];
     // Lock
     public const UNLOCK = 0;
