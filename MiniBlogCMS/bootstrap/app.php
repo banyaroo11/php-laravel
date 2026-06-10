@@ -23,6 +23,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'auth' => \App\Http\Middleware\Authenticate::class,
             'auth_api' => \App\Http\Middleware\Api\Authenticate::class,
             'admin_api' => \App\Http\Middleware\Api\AdminMiddleware::class,
+            'admin' => \App\Http\Middleware\IsAdmin::class,
+            'member' => \App\Http\Middleware\IsMember::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
