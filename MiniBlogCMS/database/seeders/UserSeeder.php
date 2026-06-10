@@ -32,5 +32,19 @@ class UserSeeder extends Seeder
             'role' => GeneralConst::MEMBER,
         ]);
 
+        User::create([
+            'name' => 'Hsu Myat Mo', 
+            'email' => 'hsumyatmo@gmail.com', 
+            'password' => Hash::make('hsumyatmo'), 
+            'role' => GeneralConst::MEMBER,
+        ]);
+
+        User::create([
+            'name' => 'Hay Mar Soe Naing', 
+            'email' => 'haymarsoenaing@gmail.com', 
+            'password' => Hash::make('haymarsoenaing'), 
+            'role' => GeneralConst::MEMBER,
+        ]);
+
     }
 }
